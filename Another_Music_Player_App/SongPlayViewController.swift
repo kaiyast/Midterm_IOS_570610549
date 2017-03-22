@@ -11,6 +11,8 @@ import AVFoundation
 
 class SongPlayViewController: UIViewController {
 
+    @IBOutlet weak var songimg: UIImageView!
+    
     var player = AVAudioPlayer()
    
     
@@ -23,7 +25,10 @@ class SongPlayViewController: UIViewController {
         
         songname.title = getsongname as! String?
         
-         let audioPath = Bundle.main.path(forResource: "default", ofType: "mp3")
+        
+        songimg.image = UIImage(named: (getsongname as! String?)! + ".png")
+        
+         let audioPath = Bundle.main.path(forResource: (getsongname as! String?)!, ofType: "mp3")
         
         do {
             try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))

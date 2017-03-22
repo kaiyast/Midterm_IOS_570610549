@@ -39,7 +39,11 @@ class SongListViewController: UIViewController,UITableViewDataSource,UITableView
         return cell
     }
     
-
+    func tableView(_ didSelectRowAttableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let songname = Song_list[indexPath.row]
+        UserDefaults.standard.set( songname , forKey: "songname")
+        self.performSegue(withIdentifier: "login", sender: self)
+    }
     /*
     // MARK: - Navigation
 

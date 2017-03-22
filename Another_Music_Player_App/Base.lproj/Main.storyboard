@@ -143,6 +143,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="songimg" destination="iyv-QE-VXx" id="7R7-In-WgR"/>
                         <outlet property="songname" destination="DBE-Xx-my0" id="S7v-bB-Z2G"/>
                         <outlet property="volum_val" destination="DkF-8J-ofX" id="vlo-cw-k0o"/>
                     </connections>
@@ -214,10 +215,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="eF7-Yy-aKN" kind="show" identifier="playsong" id="gxu-Lt-a91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdo-bV-1lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.39999999999998" y="-102.09895052473765"/>
+            <point key="canvasLocation" x="1002" y="-240"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Dhc-EI-OP8">
@@ -296,6 +300,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HE6-T8-ubF"/>
-        <segue reference="Vd6-rt-bUh"/>
+        <segue reference="gxu-Lt-a91"/>
     </inferredMetricsTieBreakers>
 </document>

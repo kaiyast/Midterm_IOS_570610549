@@ -33,7 +33,9 @@ class LoginViewController: UIViewController {
     }
 
     
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,6 +51,15 @@ class LoginViewController: UIViewController {
             self.performSegue(withIdentifier: "login", sender: self)
             print("login_ok");
             
+        }
+        else
+        {
+        
+                let rand = Int(arc4random_uniform(10000))
+            
+                   random_txt.text = String(rand);
+            
+            password_input.text = ""
         }
     }
 
