@@ -26,6 +26,9 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func Switchtosong(_ sender: Any) {
+          self.performSegue(withIdentifier: "switchtoplaysong", sender: self)
+    }
 
     /*
     // MARK: - Navigation

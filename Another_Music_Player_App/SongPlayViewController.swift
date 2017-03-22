@@ -15,6 +15,10 @@ class SongPlayViewController: UIViewController {
     
     var player = AVAudioPlayer()
    
+    @IBAction func back(_ sender: Any) {
+        player.stop();
+        self.performSegue(withIdentifier: "back", sender: self)
+    }
     
     @IBOutlet weak var songname: UINavigationItem!
     
@@ -46,7 +50,8 @@ class SongPlayViewController: UIViewController {
     
 
     @IBAction func play(_ sender: Any) {
-          player.play()
+        player.stop()
+        player.play()
     }
     @IBAction func pasue(_ sender: Any) {
           player.pause()
